@@ -15,7 +15,7 @@ public class EnemyShip : MonoBehaviour {
     // Use this for initialization
 	void Start () {
 
-        var BasicEnemyShip = gameObject.transform.GetChild(0).gameObject;
+        var BasicEnemyShip = GameObject.FindWithTag("IncomingShip");
         UpdatePosition = true;
         UpdatePositionDelay = 1;
         FirstZPosition = 6;
