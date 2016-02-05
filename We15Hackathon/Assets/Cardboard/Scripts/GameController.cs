@@ -4,7 +4,7 @@ using System.Collections;
 public class GameController : MonoBehaviour {
 
     public GameObject Trump;
-    public Vector3 spawnValues;
+    public Vector3 IncomingShip;
     public int hazardCount;
     public float spawnWait;
     public float startWait;
@@ -24,7 +24,7 @@ public class GameController : MonoBehaviour {
             {
                 Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
                 Quaternion spawnRotation = Quaternion.identity;
-                Instantiate(Trump, spawnPosition, spawnRotation);
+                Instantiate(IncomingShip, spawnPosition, spawnRotation);
                 yield return new WaitForSeconds(spawnWait);
             }
             yield return new WaitForSeconds(waveWait);
